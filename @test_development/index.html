@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/> <!-- ion rangeSlider css-->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel='stylesheet' type='text/css' href='css/index.css' />
+    <link rel='stylesheet' type='text/css' href='css/filter.css' />
+    <link rel='stylesheet' type='text/css' href='css/explore.css' />
+
+
+
+    <title>The Steam Curator</title>
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
+</head>
+<body>
+    <header>
+        <nav class='menu'> 
+            <ul class='nav-links'>
+                <li><a href='#' class='nav-link-selected nav-button'>Explore</a></li>
+                <li><a href='games.html' class='nav-button'>Games</a></li>
+                <li><a href='about.html' class='nav-button'>About</a></li>
+                <li><a class='donate' href='donate.html'>Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class='margin-container'>
+            <div class='filters'> <!-- container for simple filter and search bar -->
+                <div></div>
+                <input type='text' placeholder='Search' class='search' id='search' autocomplete="off">
+                <script>
+                    jQuery(function() {
+                        var previousSearch = "";
+                        $('#search').on("keypress", function (event) {
+                            if (event.key === "Enter") {
+                                event.preventDefault();
+                                if ($('#search').val().trim() != previousSearch) {
+                                    previousSearch = $('#search').val();
+                                    localStorage.setItem('search', $('#search').val());
+                                    window.location = 'games.html';
+                                }
+                            }
+                        });
+                    });
+                </script>
+            </div>
+
+            <!--<div class='explore-block'> 
+                <div class='featured-name'>EDITOR'S CHOICE & RECOMMENDED</div>
+                <div class='featured-content'>
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/252490/capsule_616x353.jpg">
+                    <div class='featured-right'>
+                        <div class='featured-name'>
+                            Rust
+                        </div>
+                        <div id='featured-images'>
+                            <img src='https://cdn.akamai.steamstatic.com/steam/apps/252490/ss_9652dbaf2de41b8c8f8305af714ee258564c453d.600x338.jpg?t=1608404151'>
+                            <img src='https://cdn.akamai.steamstatic.com/steam/apps/252490/ss_39740ea705e70bdf3d5c3f72167f2b94d2db92f8.600x338.jpg?t=1608404151'>
+                            <img src='https://cdn.akamai.steamstatic.com/steam/apps/252490/ss_39740ea705e70bdf3d5c3f72167f2b94d2db92f8.600x338.jpg?t=1608404151'>
+                            <img src='https://cdn.akamai.steamstatic.com/steam/apps/252490/ss_39740ea705e70bdf3d5c3f72167f2b94d2db92f8.600x338.jpg?t=1608404151'>
+                        </div>
+                        <div class='tags'>
+                        <div class='featured-tags'>
+                            <div class='tag'>Survival</div>
+                            <div class='tag'>Crafting</div>
+                            <div class='tag'>Multiplayer</div>
+                            <div class='tag'>Open World</div>
+                            <div class='tag'>Open World Survival Craft</div>
+                            <div class='tag'>Building</div>
+
+                        </div>
+                        <div class='featured-price'>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function lerp (value1, value2, amount) {
+                    amount = amount < 0 ? 0 : amount;
+                    amount = amount > 1 ? 1 : amount;
+                    return value1 + (value2 - value1) * amount;
+                }
+
+                jQuery(function() {
+                    var delta
+                    var count = 1;
+                    setInterval(move, 10);
+                    function move() {
+                            if (Math.abs(delta) <= 0.01 || count > 30) {
+                                delta = 0;
+                                count = 0;
+                            }
+                            else
+                            {
+                                count++;
+                                delta = lerp(delta, 0, 0.1);
+                                document.getElementById('featured-images').scrollLeft -= delta;
+                            }  
+                    }
+
+                    document.getElementById('featured-images').addEventListener('mousewheel', function(e) {
+                        count = 0;
+                        delta = e.wheelDelta/8;
+                        e.preventDefault();
+                    }, false);
+                });
+            </script>-->
+
+            <div class='explore-block'> 
+                <div class='hg-name'>Hidden Gems</div>
+                <div class='hg-content'>
+                    <div>
+                        <div class='left-pane'>
+                            <div class='h-item'>
+                                <img src='https://cdn.akamai.steamstatic.com/steam/apps/620/capsule_616x353.jpg'>
+                                <div>
+                                    
+                                </div>
+                            </div>
+                            <div class='h-item'>
+                                <img src='https://cdn.akamai.steamstatic.com/steam/apps/620/capsule_616x353.jpg'>
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class='h-item'>
+                                <img src='https://cdn.akamai.steamstatic.com/steam/apps/620/capsule_616x353.jpg'>
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class='h-item'>
+                                <img src='https://cdn.akamai.steamstatic.com/steam/apps/620/capsule_616x353.jpg'>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class='right-pane'>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class='left-pane'>
+                            <div class='h-item'>
+                                <img src='https://cdn.akamai.steamstatic.com/steam/apps/620/capsule_616x353.jpg'>
+                                <div>
+                                    
+                                </div>
+                            </div>
+                            <div class='h-item'>
+                                <img src='https://cdn.akamai.steamstatic.com/steam/apps/620/capsule_616x353.jpg'>
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class='h-item'>
+                                <img src='https://cdn.akamai.steamstatic.com/steam/apps/620/capsule_616x353.jpg'>
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class='h-item'>
+                                <img src='https://cdn.akamai.steamstatic.com/steam/apps/620/capsule_616x353.jpg'>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class='right-pane'>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='explore-block'> 
+                <div class='hg-name'>Highest Discount</div>
+                <div class='hg-content'>
+                    <div>content1</div>
+                    <div>content2</div>
+                    <div>content3</div>
+                    <div>content4</div>
+                    <div>content5</div>
+                    <div>content6</div>
+                </div>
+            </div>
+
+            <div class='explore-block'> 
+                <div class='hg-name'>New Releases</div>
+                <div class='hg-content'>
+                    <div>content1</div>
+                    <div>content2</div>
+                    <div>content3</div>
+                    <div>content4</div>
+                    <div>content5</div>
+                    <div>content6</div>
+                </div>
+            </div>
+
+            <script>
+                $('.hg-content').slick({
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: false,
+                    draggable: true,
+                    waitForAnimate: false,
+                    speed: 200
+                });
+            </script>
+        </div>
+    </main>
+</body>
+</html>

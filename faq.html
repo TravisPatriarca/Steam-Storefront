@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' type='text/css' href='css/index.css' />
+    <link rel='stylesheet' type='text/css' href='css/faq.css' />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>The Steam Curator</title>
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
+</head>
+<body>
+    <header>
+        <nav class='menu'> 
+            <ul class='nav-links'>
+                <li><a href='games.html' class='nav-button'>Games</a></li>
+                <li><a href='#' class='nav-link-selected nav-button'>FAQ</a></li>
+                <li><a class='donate' href='donate.html'>Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class='margin-container'>
+            <h1>Frequently Asked Questions (FAQ)</h1>
+            <div class='qa-block'>
+                <div class='q-block'>
+                    <p><span class='q-icon'>Q.</span> What is The Steam Curator?</p>
+                </div>
+                <div class='a-block'>
+                    <p>The Steam Curator (tSC) is a curated game store. This means that all games present on the store have undergone a review process. The mission for tSC is to improve visibility for steam games that don't reach the audience they deserve.</p>
+                </div>
+            </div>
+            <div class='qa-block'>
+                <div class='q-block'>
+                    <p><span class='q-icon'>Q.</span> Does The Steam Curator have regional pricing?</p>
+                </div>
+                <div class='a-block'>
+                    <p>The Steam Curator does not provide regional pricing for games and currently, only support USD($). This is due to hardware/cost limitations, but we would love to implement regional pricing in the future.</p>
+                </div>
+            </div>
+            <div class='qa-block'>
+                <div class='q-block'>
+                    <p><span class='q-icon'>Q.</span> How can I get a game on The Steam Curator?</p>
+                </div>
+                <div class='a-block'>
+                    <p>If you're an enthusiastic fan and think a game deserves to be on this platform you can enter an application over on our discord server. If you are a developer you can also use our discord but use the developer application instead. 
+                        <br></br><span id='discord-btn'><span class='fab fa-discord' style='color: #161616;'></span><a href='https://discord.gg/5q2aCkrfEX' class='qa-link'>Our Discord server</a></span> </p>
+                </div>
+            </div>
+            <div class='qa-block'>
+                <div class='q-block'>
+                    <p><span class='q-icon'>Q.</span> How are games selected?</p>
+                </div>
+                <div class='a-block'>
+                    <p>Games are reviewed individually and have to pass a series of tests to make it onto the storefront. The point of the review system is to avoid asset-flip and low effort games that have increased in numbers on the steam store. This will hopefully increase visibility for talented indie developers. 
+                    <br></br>The review process will be based on several factors including: 
+                    <ul>
+                        <li><span>Steam reviews:</span></br>
+                            A game will require to have at least or greater than 40% average review rating on steam. Review bombing will be taken into account in the context of the situation. Games which have a less than 40% average steam rating will need to provide reasoning as to why their rating is at that level.</li>
+                        <li><span>Reproducibility:</span></br> 
+                            Reproducibility determines how much effort was put into a game. A high reproducibility could me two things. The game uses stolen or existing assets or the game is small in scale. Game which are small in scale will not be affected by this metric.</li>
+                        <li><span>Uniqueness:</span></br> 
+                            This metric will be used in conjunction with the reproducibility metric. It determines how unique the game is. If the game is easily repoducible and is not unique than it is most likely an asset flip type game which are unlikely to appear on this store front.</li>
+                        <li><span>Popularity:</span></br> 
+                            If the game is popular it will have a higher chance of passing the review process.</li>
+                    </ul>
+                    </br>
+                    Games do not need to fullfill all the requirements but have a higher chance if they do</p>
+                </div>
+            </div>
+            <div class='qa-block'>
+                <div class='q-block'>
+                    <p><span class='q-icon'>Q.</span> Why does The Steam Curator need donations?</p>
+                </div>
+                <div class='a-block'>
+                    <p>The Steam Curator requires donations for server costs. If donations are not able to cover server costs than an alternative monitisation system will have to be implemented (i.e Ads).
+                        <br></br><span id='patreon-btn'><span class='fab fa-patreon' style='color: #161616;'></span><a href='https://discord.gg/5q2aCkrfEX' class='qa-link'>Support us here</a></span> </p>
+                </div>
+            </div>
+            <div class='qa-block'>
+                <div class='q-block'>
+                    <p><span class='q-icon'>Q.</span> What are the future plans for The Steam Curator?</p>
+                </div>
+                <div class='a-block'>
+                    <p>Many plans involve improving the websites functionality and usability. A roadmap for the website can be found on our trello page. Announcements will also be made on our twitter.
+                        <br></br><span id='trello-btn'><span class='fab fa-trello' style='color: #161616;'></span><a href='https://trello.com/b/V5fuyfmz/website' class='qa-link'>Roadmap</a></span>
+                        <span id='twitter-btn'><span class='fab fa-twitter' style='color: #161616;'></span><a href='' class='qa-link'>Twitter</a></span> </p>
+                </div>
+            </div>
+            <div class='qa-block'>
+                <div class='q-block'>
+                    <p><span class='q-icon'>Q.</span> How is steam data collected?</p>
+                </div>
+                <div class='a-block'>
+                    <p>The data for steam games in obtained through steams unofficial API. Alternative images for steam games are obtained using steam grid DB API. More information about these API can be found on https://wiki.teamfortress.com/wiki/User:RJackson/StorefrontAPI and https://www.steamgriddb.com/api/v2</p>
+                </div>
+            </div>
+            <div class='qa-block'>
+                <div class='q-block'>
+                    <p><span class='q-icon'>Q.</span> Does The Steam Curator collect or distribute user data?</p>
+                </div>
+                <div class='a-block'>
+                    <p>The Steam Curator does not collect any user data.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id='footer'>
+            <div id='footer-info'>
+                <!--<img src='' alt=''>-->
+                <p id='copy'>
+                    &#169; TheSteamCurator 2021. All rights reserved. TheSteamCurator is in no way affiliated or endord with Valve Corporation&#8482; or Steam&#8482;. 
+                    No user data is stored or collected. For business enquiries contact: <a href='mailto: thesteamcurator@gamil.com'>thesteamcurator@gmail.com</a>
+                </p>
+            </div>
+            <div id='social'>
+                <ul>
+                    <li><a href=''>FAQ</a></li>
+                    <li class='fab fa-twitter' style='color: #1da1f2;'><a href=''>Twitter</a></li>
+                    <li class='fab fa-discord' style='color: #7289da;'><a href='' >Discord</a></li>
+                    <li class='fab fa-patreon' style='color: #e67e70;'><a href='' >Patreon</a></li>
+                    <li class='fab fa-trello' style='color: #3c8dbb;'><a href='https://trello.com/b/V5fuyfmz/website' >Trello</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

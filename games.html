@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/> <!-- ion rangeSlider css-->
+    <link rel='stylesheet' type='text/css' href='css/index.css' />
+    <link rel='stylesheet' type='text/css' href='css/filter.css' />
+    <link rel='stylesheet' type='text/css' href='css/games.css' />
+    <link rel='stylesheet' type='text/css' href='css/slider.css' />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script> <!--ion rangeSlider js-->
+    <script src="scripts/index.js"></script>
+    <title>The Steam Curator</title>
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
+</head>
+<body>
+    <header>
+        <nav class='menu'> 
+            <ul class='nav-links'>
+                <li><a href='#' class='nav-link-selected nav-button'>Games</a></li>
+                <li><a href='faq.html' class='nav-button'>FAQ</a></li>
+                <li><a class='donate' href='donate.html'>Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class='margin-container'>
+            <div class='filters'> <!-- container for simple filter and search bar -->
+                <div class="custom-select"><!-- container for simple filter -->
+                    <div class="select-selected">
+                        <span id="sort-by">Sort By: </span><span id="selected-name">Relevance</span>
+                    </div>
+                    <div class="select-items select-hide">
+                        <div value='relevance' class="same-as-selected">Relevance</div>
+                        <div value='release_date DESC'>Release Date</div>
+                        <div value='final_price ASC'>Lowest Price</div>
+                        <div value='final_price DESC'>Highest Price</div>
+                        <div value='review_percent DESC'>User Reviews</div>
+                        <div value='discount_percent DESC'>Highest Discount</div>
+                    </div>
+                </div>
+                    
+                <input type='text' placeholder='Search' class='search' id='search' autocomplete="off">
+            </div>
+
+            <div class='main-content'> <!-- container for games and side filters -->
+                <div class='games'>
+                </div> <!-- container for games -->
+                <div id="item-popup-details" style='color: white;' hidden='true'>
+                    <div id="item-popup-name"></div>
+                    <div id="item-popup-dev"></div>
+                    <div id="item-popup-release"></div>
+                    <div id="item-popup-images">
+                        <img src='#'>
+                        <img src='#' hidden='true'>
+                        <img src='#' hidden='true'>
+                        <img src='#' hidden='true'>
+                    </div>
+                    
+                    <div id="item-popup-details-bottom">
+                        
+                        <div id="item-popup-tags">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        
+                        <div id="item-popup-desc"></div>
+                        
+
+                        <div id="item-popup-review">
+                            <span id="item-popup-total-review"></span>
+                            <span id="item-popup-review-percent"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='advanced-filter'> <!-- container for side filters -->
+                    <div class='advance-filter-div'> Narrow by Price<!-- Price slider/special offers-->
+                        <div class='advanced-filter-inner'>
+                            <input type="text" id="price-slider" name="my_range" value=""/>
+                            <div id="price-slider-text">Between $0 and $200</div>
+                            
+                            <div class='filter-specials'>
+                                <span class='checkbox' data-state='unchecked' data-states='2'></span>
+                                <span>Special Offers</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='advance-filter-div'> Narrow by Reviews<!-- Review Slider-->
+                        <div class='advanced-filter-inner'>
+                            <input type="text" id="review-slider" name="my_range" value=""/>
+                            <div id="review-slider-text">Between 0% and 100%</div>
+                            <div class="review-range">
+                                <input type='text' placeholder='Min' class='search review-search' id='review-min' autocomplete="off">
+                                <input type='text' placeholder='Max' class='search review-search' id='review-max' autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='advance-filter-div'> Narrow by Release Date<!-- Review Slider-->
+                        <div class='advanced-filter-inner'>
+                            <div class="release-range">
+                                <div>Start date:</div>
+                                <input type='date' class='search release-search' id='release-start' autocomplete="off">
+                                <div>End date:</div>
+                                <input type='date' class='search release-search' id='release-end' autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='advance-filter-div'> Narrow by Category<!-- Tag Dropdown-->
+                        <div class='advanced-filter-inner'>
+                            <div class='active-genre-div'></div>
+                            <div class='genre-div'></div>
+                            <input type='text' placeholder='Search' class='search' id='genre-search' autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class='advance-filter-div'> Narrow by Feature<!-- Features (vr, multiplayer, free)-->
+                        <div class='advanced-filter-inner'>
+                            <div class='feature-div'>
+                                <div class='filter-specials feature'>
+                                    <span class='checkbox' data-state='unchecked' data-states='3' data-value='is_Free'></span>
+                                    <span>Free To Play</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='notice'>
+                        *User Reviews are not 100% accurate. </br>
+                        Product Information may be delayed*
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id='footer'>
+            <div id='footer-info'>
+                <!--<img src='' alt=''>-->
+                <p id='copy'>
+                    &#169; TheSteamCurator 2021. All rights reserved. TheSteamCurator is in no way affiliated or endord with Valve Corporation&#8482; or Steam&#8482;. 
+                    No user data is stored or collected. For business enquiries contact: <a href='mailto: thesteamcurator@gamil.com'>thesteamcurator@gmail.com</a>
+                </p>
+            </div>
+            <div id='social'>
+                <ul>
+                    <li><a href=''>FAQ</a></li>
+                    <li class='fab fa-twitter' style='color: #1da1f2;'><a href=''>Twitter</a></li>
+                    <li class='fab fa-discord' style='color: #7289da;'><a href='' >Discord</a></li>
+                    <li class='fab fa-patreon' style='color: #e67e70;'><a href='' >Patreon</a></li>
+                    <li class='fab fa-trello' style='color: #3c8dbb;'><a href='' >Trello</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

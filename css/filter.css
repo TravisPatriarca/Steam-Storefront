@@ -1,0 +1,279 @@
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+}
+
+#sort-by {
+    color: #9d9d9d;
+}
+
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+    background-color: transparent;
+    font-size: clamp(13px, 0.7vw, 15px);
+    /*font-size: 13px;*/
+    padding: 0px 10px 0px 5px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div, .select-selected {
+    cursor: pointer;
+}
+
+.select-items div {
+    padding: 6px 10px 6px 10px;
+    cursor: pointer;
+    color:rgb(151, 151, 151)
+}
+
+/* Style items (options): */
+.select-items {
+    padding-top: 5px;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    z-index: 99;
+    font-size: clamp(12px, 0.7vw, 14px);
+    /*font-size: 12px;*/
+    background-color: #1f1f1f;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected, .select-selected, #selected-name {
+    color: rgb(223, 223, 223) !important;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    /*background-color: green;*/
+    width: 100%;
+}
+
+.search {
+    background-color: #202020;
+    width: 15%;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    height: 100%;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.search:focus {
+    outline: 1px solid #727272
+}
+
+#search {
+    padding: 3px 5px 3px 10px;
+    font-size: clamp(12px, 0.7vw, 14px);
+}
+
+.advanced-filter {
+    flex: 1;
+    /*background-color: blue;*/
+    height: 100%;
+}
+
+#price-slider-text, #review-slider-text {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(12px, 0.7vw, 14px);
+    /*font-size: 12px;*/
+    color: #9d9d9d;
+}
+
+.advance-filter-div {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(14px, 0.7vw, 16px);
+    /*font-size: 14px;*/
+    color: rgb(211, 211, 211);
+    border-bottom: 1px solid rgb(44, 44, 44);
+    /*border-radius: 2px;*/
+    padding: 10px 10px 20px 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.advance-filter-div:first-child {
+    border-top: 1px solid rgb(44, 44, 44);
+}
+
+.advanced-filter-inner {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.checkbox {
+    user-select: none;
+    -webkit-appearance: none;
+    outline: none;
+    background-color:#2b2b2b;
+    top: 1px;
+	padding: 6px;
+	border-radius: 1px;
+	display: inline-block;
+	position: relative;
+}
+
+.checkbox[data-state='checked'] {
+	background-color: #ddbf17;
+}
+
+.checkbox[data-state='exclude'] {
+	background-color: #963333;
+}
+
+.filter-specials {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.filter-specials div:nth-child(2) {
+    display: block;
+    margin-left: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(13px, 0.7vw, 15px);
+    /*font-size: 13px;*/
+    color: #9d9d9d;
+    margin-right: 10px;
+    overflow: hidden;
+    flex: 1;
+    width: 0px;
+    /*background-color: red;*/
+}
+
+.filter-specials span:nth-child(2) {
+    margin-left: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(13px, 0.7vw, 15px);
+    /*font-size: 13px;*/
+    color: #9d9d9d;
+    
+}
+
+.filter-specials div:nth-child(3) {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(13px, 0.7vw, 15px);
+    /*font-size: 13px;*/
+    color:#9d9d9d;
+    background-color: #202020;
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+
+.genre {
+    margin: 10px 0px 0px 0px !important;
+    display: none;
+}
+
+.feature {
+    margin: 10px 0px 0px 0px !important;
+}
+
+.active-genre {
+    display: flex;
+}
+
+.genre-div {
+    margin: 10px 0px;
+}
+
+.feature-div {
+    margin: 10px 0px 0px 0px;
+}
+
+.review-range {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#review-max, #review-min{
+    width: 45%;
+    padding: 3px 5px 3px 10px;
+    font-size: clamp(12px, 0.7vw, 14px);
+}
+
+.release-range {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.release-range:focus {
+    outline: none !important;
+}
+
+.release-search {
+    width: 100%;
+    padding: 3px 5px 3px 10px;
+}
+
+.release-search::-webkit-datetime-edit-text,
+.release-search::-webkit-datetime-edit-month-field, 
+.release-search::-webkit-datetime-edit-day-field,
+.release-search::-webkit-datetime-edit-year-field { 
+    color: #9d9d9d;
+}
+
+.release-search::-webkit-datetime-edit-day-field:focus,
+.release-search::-webkit-datetime-edit-month-field:focus,
+.release-search::-webkit-datetime-edit-year-field:focus {
+    background-color: #494949;
+    color: rgb(196, 196, 196);
+}
+
+.release-search::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.5;
+    margin:0px;
+    padding:0px;
+  }
+
+.release-range div {
+    color: #9d9d9d;
+    margin-bottom: 3px;
+    text-align: left;
+    font-size: clamp(12px, 0.7vw, 14px);
+    font-family: "Montserrat", sans-serif;
+}
+
+#release-start {
+    margin-bottom: 15px;
+}
+
+#genre-search { 
+    display: block;
+    margin: 20px auto 0px auto;
+    text-align: left;
+    padding: 3px 10px 3px 10px;
+    width: 100%;
+    font-size: clamp(12px, 0.7vw, 14px);
+    /*font-size: 12px;*/
+}
+
+.notice {
+    display: block;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(13px, 0.7vw, 15px);
+    /*font-size: 13px;*/
+    color: #9d9d9d;
+}

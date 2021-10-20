@@ -1,0 +1,215 @@
+.main-content {
+    margin-top: 20px;
+    display: flex;
+}
+
+.games {
+    width: 78%;
+    /*background-color: maroon;*/
+    margin-right: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.item {
+    font-family: "Open Sans";
+    font-weight: 400;
+    width: 13%; /* Default 16%*/
+    margin-bottom: 15px;
+    white-space: nowrap;
+    /*background-color: red;*/
+}
+
+.item-invisible {
+    visibility: hidden;
+}
+
+.item img {
+    object-fit: cover;
+    max-width: 100%;
+    border-radius: 5px;
+    filter: contrast(95%);
+}
+
+.item img:hover {
+    filter: contrast(105%);
+    border-bottom: 2px solid #ddbf17;
+    margin-bottom: -2px;
+}
+
+.item .item-details {
+    padding: 5px;
+}
+
+.item .item-name {
+    color: rgb(223, 223, 223);
+    /*font-size: 14px;*/
+    font-size: clamp(14px, 0.7vw, 16px);
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+
+.item .item-dev {
+    color: #9d9d9d;
+    /*font-size: 11px;*/
+    font-size: clamp(11px, 0.7vw, 13px);
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+
+.item .item-price-info {
+    position: relative;
+    /*display: flex;
+    justify-content: flex-end;
+    align-items: center;*/
+    width: 100%;
+}
+
+.item .item-discount-info {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.item .item-discount {
+    display: inline-block;
+    color: #161616;
+    background-color: #ddbf17;
+    padding: 0px 5px;
+    font-size: clamp(13px, 0.7vw, 15px);
+    /*font-size: 14px;*/
+    font-weight: 500;
+
+    text-align: left;
+    margin-right: 10px;
+}
+
+.item .item-initial-price {
+    color: #646464;
+    position: absolute;
+    font-size: clamp(11px, 0.7vw, 13px);
+    /*font-size: 13px;*/
+    text-decoration: line-through;
+    right: 0;
+    bottom: calc(clamp(13px, 0.7vw, 15px) + 2px);
+}
+
+.item .item-final-price {
+    font-size: clamp(13px, 0.7vw, 15px);
+    /*font-size: 13px;*/
+    font-weight: 400;
+    color: rgb(223, 223, 223);
+    text-align: right;
+}
+
+#item-popup-details {
+    position: absolute;
+    width: 350px;
+    background-color: #1f1f1f;
+    background-color: #161616;
+    border: 1px solid rgb(34, 34, 34);
+    border-radius: 8px;
+    padding-top: 5px;
+    font-family: "Open Sans";
+    z-index: 99;
+}
+
+#item-popup-details #item-popup-name {
+    color: rgb(223, 223, 223);
+    font-size: clamp(18px, 0.7vw, 20px);
+    /*font-size: 18px;*/
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+#item-popup-details #item-popup-dev {
+    margin-bottom: 5px;
+    color: #9d9d9d;
+    font-size: clamp(12px, 0.7vw, 14px);
+    /*font-size: 12px;*/
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#item-popup-images {
+    position: relative;
+    overflow: hidden;
+}
+
+#item-popup-details img {
+    height: 100%;
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+}
+
+#item-popup-details-bottom {
+    padding: 5px 7px;
+}
+
+#item-popup-details #item-popup-desc {
+    color: #9d9d9d;
+    font-size: clamp(10px, 0.7vw, 12px);
+    margin-top: 7px;
+    /*font-size: 10px;*/
+}
+
+#item-popup-details #item-popup-release {
+    text-align:center;
+    color: #b6b6b6;
+    font-size: clamp(10px, 0.7vw, 12px);
+    /*font-size: 10px;*/
+}
+#item-popup-details #item-popup-release span {
+    color: #9d9d9d;
+    font-size: clamp(10px, 0.7vw, 12px);
+    margin-top: 7px;
+    /*font-size: 10px;*/
+}
+
+#item-popup-tags {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+#item-popup-tags span{
+    background-color: rgb(39, 39, 39);
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 12px;
+    color: rgb(168, 168, 168);
+    border-radius: 5px;
+    padding: 2px 7px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+#item-popup-details #item-popup-review {
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(13px, 0.7vw, 15px);
+    margin-top: 7px;
+    /*font-size: 13px;*/
+}
+
+#item-popup-total-review {
+    color: #d1d1d1;
+}
+
+.no-results {
+    font-size: clamp(24px, 0.7vw, 26px);
+    /*font-size: 24px;*/
+    font-family: "Open Sans";
+    font-weight: 400;
+    color: white;
+    margin: auto;
+}

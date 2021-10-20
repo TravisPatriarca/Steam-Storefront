@@ -1,0 +1,3 @@
+29-03-2021 01:33:40: FAILED!!!: [224760] FEZ ReferenceError: formatDate is not defined
+29-03-2021 01:33:41: FAILED!!!: [677120] Heroes of Hammerwatch ReferenceError: formatDate is not defined
+29-03-2021 01:33:42: FAILED!!!: [431240] Golf With Your Friends ReferenceError: formatDate is not defined
